@@ -54,7 +54,7 @@ export default function(h) {
           (cache[key] =
             (isDeclsFunction && parse(decls(props))) || parse(decls))
         var node = h(type, props, children)
-        node.props.class = [props.class, cache[key], node.props.class].filter(Boolean).join(" ")
+        node.attributes.class = [props.class, cache[key], node.attributes.class].filter(Boolean).join(" ")
         return node
       }
     }
